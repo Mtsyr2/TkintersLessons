@@ -11,11 +11,11 @@ colors = {'красный': '#ff0000',
 
 class Color_Button:
     def __init__(self, color):
-        self.but = Button(text=color, width=20, bg=colors[color], command=self.press_action)
+        self.but = Button(width=3, height=1, padx=3, bg=colors[color], command=self.press_action)
         self.operator = color
         # self.color = color
         self.bg = colors[color]
-        self.but.pack()
+        self.but.pack(side=LEFT)
 
     def press_action(self):
         color_ent.delete(0, END)
